@@ -1,0 +1,8 @@
+﻿<MenuItem x:Class="BztToolbox.Modules.FilterEditor.Views.FilterEditorMenuView"
+		  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		  Header="F_ilter editor"
+		  Command="{Binding Path=ShowModuleCmd}"
+		  CommandParameter="FilterEditorView">
+
+</MenuItem>
