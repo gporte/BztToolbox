@@ -1,0 +1,77 @@
+﻿<UserControl x:Class="BztToolbox.Modules.AssembliesExplorer.Views.AssembliesExplorerView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="auto" />
+			<RowDefinition MinHeight="50" />
+			<RowDefinition Height="auto"/>
+			<RowDefinition Height="auto" />
+			<RowDefinition Height="auto" />
+		</Grid.RowDefinitions>
+
+		<TextBox Name="tbxFilter" Grid.Row="0" Text="{Binding Path=ItemsFilter, UpdateSourceTrigger=PropertyChanged}" />
+
+		<ListBox Name="lbxAssemblies" Grid.Row="1" ItemsSource="{Binding Path=Items}">
+			<ListBox.ItemTemplate>
+				<DataTemplate>
+					<StackPanel Orientation="Horizontal">
+						<Label Content="{Binding Path=Name}" Width="300" />
+						<Label Content="{Binding Path=Version}" />
+					</StackPanel>
+				</DataTemplate>
+			</ListBox.ItemTemplate>
+		</ListBox>
+
+		<GridSplitter Grid.Row="2" Height="3"  HorizontalAlignment="Stretch" VerticalAlignment="Center"  />
+
+		<ScrollViewer Grid.Row="3">
+			<StackPanel Orientation="Vertical">
+				<GroupBox Header="Schemas" Margin="5,5,5,5">
+					<ListView ItemsSource="{Binding ElementName=lbxAssemblies, Path=SelectedItem.Schemas}" Height="150">
+						<ListView.View>
+							<GridView>
+								<GridViewColumn Header="Target NameSpace" DisplayMemberBinding="{Binding TargetNameSpace}" />
+								<GridViewColumn Header="Root" DisplayMemberBinding="{Binding RootName}" />
+								<GridViewColumn Header="Full Name" DisplayMemberBinding="{Binding FullName}" />
+							</GridView>
+						</ListView.View>
+					</ListView>
+				</GroupBox>
+				
+				<GroupBox Header="Mappings" Margin="5,5,5,5">
+					<ListView ItemsSource="{Binding ElementName=lbxAssemblies, Path=SelectedItem.Transforms}" Height="150">
+						<ListView.View>
+							<GridView>
+								<GridViewColumn Header="Source Schema" DisplayMemberBinding="{Binding SourceSchema.FullName}" />
+								<GridViewColumn Header="Full Name" DisplayMemberBinding="{Binding FullName}" />
+								<GridViewColumn Header="Target Schema" DisplayMemberBinding="{Binding TargetSchema.FullName}" />
+							</GridView>
+						</ListView.View>
+					</ListView>
+				</GroupBox>
+				
+				<GroupBox Header="Orchestrations" Margin="5,5,5,5">
+					<ListView ItemsSource="{Binding ElementName=lbxAssemblies, Path=SelectedItem.Orchestrations}" Height="150">
+						<ListView.View>
+							<GridView>
+								<GridViewColumn Header="Full Name" DisplayMemberBinding="{Binding FullName}" />
+							</GridView>
+						</ListView.View>
+					</ListView>
+				</GroupBox>
+				
+				<GroupBox Header="Pipelines" Margin="5,5,5,5">
+					<ListView ItemsSource="{Binding ElementName=lbxAssemblies, Path=SelectedItem.Pipelines}" Height="150">
+						<ListView.View>
+							<GridView>
+								<GridViewColumn Header="Type" DisplayMemberBinding="{Binding Type}" />
+								<GridViewColumn Header="Full Name" DisplayMemberBinding="{Binding FullName}" />
+							</GridView>
+						</ListView.View>
+					</ListView>
+				</GroupBox>
+			</StackPanel>
+		</ScrollViewer>
+	</Grid>
+</UserControl>

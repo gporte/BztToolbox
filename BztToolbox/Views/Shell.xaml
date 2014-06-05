@@ -1,0 +1,23 @@
+﻿<Window x:Class="BztToolbox.Views.Shell"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:cal="http://www.codeplex.com/CompositeWPF"
+	xmlns:const="clr-namespace:BztToolbox.Common.Constantes;assembly=BztToolbox.Common"
+	Title="BztToolbox" Height="600" Width="800" >
+	<DockPanel>
+		<Menu DockPanel.Dock="Top">
+			<MenuItem Header="_Fichier">
+				<MenuItem Header="_Quitter" Command="{Binding Path=ExitCmd}" />
+			</MenuItem>
+			<MenuItem Header="_Modules" cal:RegionManager.RegionName="{x:Static const:RegionNames.MenuModulesRegion}">
+				
+			</MenuItem>
+		</Menu>
+		
+		<Expander DockPanel.Dock="Bottom" Header="Journal" IsExpanded="False" Margin="5,5,5,5">
+			<TextBox IsReadOnly="True" VerticalScrollBarVisibility="Auto" Height="150" Text="{Binding Path=Notifications}" />
+		</Expander>
+		
+		<ContentControl Margin="5,5,5,5" cal:RegionManager.RegionName="{x:Static const:RegionNames.ContentRegion}" />
+	</DockPanel>
+</Window>

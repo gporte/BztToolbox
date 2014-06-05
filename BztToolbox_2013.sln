@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BztToolbox", "BztToolbox\BztToolbox.csproj", "{B6ABF19D-3B47-4D56-97B8-C1B264FC50B5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{A1891A8D-FF7F-429C-9B3A-A3069F64B53E}"
+	ProjectSection(SolutionItems) = preProject
+		Libs\Microsoft.BizTalk.BtsDbVersion.dll = Libs\Microsoft.BizTalk.BtsDbVersion.dll
+		Libs\Microsoft.BizTalk.ExplorerOM.dll = Libs\Microsoft.BizTalk.ExplorerOM.dll
+		Libs\Microsoft.Biztalk.Interop.Agent.dll = Libs\Microsoft.Biztalk.Interop.Agent.dll
+		Libs\Microsoft.Biztalk.RuleEngineExtensions.dll = Libs\Microsoft.Biztalk.RuleEngineExtensions.dll
+		Libs\Microsoft.BizTalk.Tracing.dll = Libs\Microsoft.BizTalk.Tracing.dll
+		Libs\Microsoft.Practices.Composite.dll = Libs\Microsoft.Practices.Composite.dll
+		Libs\Microsoft.Practices.Composite.Presentation.dll = Libs\Microsoft.Practices.Composite.Presentation.dll
+		Libs\Microsoft.Practices.Composite.UnityExtensions.dll = Libs\Microsoft.Practices.Composite.UnityExtensions.dll
+		Libs\Microsoft.Practices.ObjectBuilder2.dll = Libs\Microsoft.Practices.ObjectBuilder2.dll
+		Libs\Microsoft.Practices.ServiceLocation.dll = Libs\Microsoft.Practices.ServiceLocation.dll
+		Libs\Microsoft.Practices.Unity.dll = Libs\Microsoft.Practices.Unity.dll
+		Libs\Microsoft.RuleEngine.dll = Libs\Microsoft.RuleEngine.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BztToolbox.Common", "BztToolbox.Common\BztToolbox.Common.csproj", "{58999931-AF2F-42DB-A723-F8A207596DE8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{F7BFD4B4-A788-4D09-8F50-09FDB329977D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BztToolbox.Modules.AboutModules", "BztToolbox.Modules.AboutModules\BztToolbox.Modules.AboutModules.csproj", "{8A6D20F9-6930-4F1A-8CAA-0C478B2BCBB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BztToolbox.Modules.AssembliesExplorer", "BztToolbox.Modules.AssembliesExplorer\BztToolbox.Modules.AssembliesExplorer.csproj", "{B98D3D2C-4EFF-4C70-85A6-5F8EF609B2D0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B6ABF19D-3B47-4D56-97B8-C1B264FC50B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6ABF19D-3B47-4D56-97B8-C1B264FC50B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6ABF19D-3B47-4D56-97B8-C1B264FC50B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6ABF19D-3B47-4D56-97B8-C1B264FC50B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58999931-AF2F-42DB-A723-F8A207596DE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58999931-AF2F-42DB-A723-F8A207596DE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58999931-AF2F-42DB-A723-F8A207596DE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58999931-AF2F-42DB-A723-F8A207596DE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A6D20F9-6930-4F1A-8CAA-0C478B2BCBB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A6D20F9-6930-4F1A-8CAA-0C478B2BCBB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A6D20F9-6930-4F1A-8CAA-0C478B2BCBB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A6D20F9-6930-4F1A-8CAA-0C478B2BCBB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B98D3D2C-4EFF-4C70-85A6-5F8EF609B2D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B98D3D2C-4EFF-4C70-85A6-5F8EF609B2D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B98D3D2C-4EFF-4C70-85A6-5F8EF609B2D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B98D3D2C-4EFF-4C70-85A6-5F8EF609B2D0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8A6D20F9-6930-4F1A-8CAA-0C478B2BCBB1} = {F7BFD4B4-A788-4D09-8F50-09FDB329977D}
+		{B98D3D2C-4EFF-4C70-85A6-5F8EF609B2D0} = {F7BFD4B4-A788-4D09-8F50-09FDB329977D}
+	EndGlobalSection
+EndGlobal

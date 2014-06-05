@@ -1,0 +1,7 @@
+﻿<MenuItem x:Class="BztToolbox.Modules.AboutModules.Views.AboutModulesMenuView"
+		  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		  Header="About _Modules"
+		  Command="{Binding Path=ShowModuleCmd}"
+		  CommandParameter="AboutModules">
+</MenuItem>

@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="BztToolbox.Modules.AboutModules.Views.AboutModulesView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+		<ListView ItemsSource="{Binding Path=Items}" Height="150">
+			<ListView.View>
+				<GridView>
+					<GridViewColumn Header="Module" DisplayMemberBinding="{Binding .}" />
+				</GridView>
+			</ListView.View>
+		</ListView>
+	</Grid>
+</UserControl>
