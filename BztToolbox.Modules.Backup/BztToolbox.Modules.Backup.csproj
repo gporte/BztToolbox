@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B98D3D2C-4EFF-4C70-85A6-5F8EF609B2D0}</ProjectGuid>
+    <ProjectGuid>{70AC2402-185E-42CB-8887-10F6E6274F25}</ProjectGuid>
     <OutputType>library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BztToolbox.Modules.AssembliesExplorer</RootNamespace>
-    <AssemblyName>BztToolbox.Modules.AssembliesExplorer</AssemblyName>
+    <RootNamespace>BztToolbox.Modules.Backup</RootNamespace>
+    <AssemblyName>BztToolbox.Modules.Backup</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -35,27 +35,31 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.BizTalk.ExplorerOM">
-      <HintPath>..\Libs\Microsoft.BizTalk.ExplorerOM.dll</HintPath>
+      <HintPath>D:\DEV\BztToolbox\Libs\Microsoft.BizTalk.ExplorerOM.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.Tracing">
+      <HintPath>D:\DEV\BztToolbox\Libs\Microsoft.BizTalk.Tracing.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.Composite">
-      <HintPath>..\Libs\Microsoft.Practices.Composite.dll</HintPath>
+      <HintPath>D:\DEV\BztToolbox\Libs\Microsoft.Practices.Composite.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.Composite.Presentation">
-      <HintPath>..\Libs\Microsoft.Practices.Composite.Presentation.dll</HintPath>
+      <HintPath>D:\DEV\BztToolbox\Libs\Microsoft.Practices.Composite.Presentation.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.Composite.UnityExtensions">
-      <HintPath>..\Libs\Microsoft.Practices.Composite.UnityExtensions.dll</HintPath>
+      <HintPath>D:\DEV\BztToolbox\Libs\Microsoft.Practices.Composite.UnityExtensions.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.ObjectBuilder2">
-      <HintPath>..\Libs\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+      <HintPath>D:\DEV\BztToolbox\Libs\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation">
-      <HintPath>..\Libs\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <HintPath>D:\DEV\BztToolbox\Libs\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.Unity">
-      <HintPath>..\Libs\Microsoft.Practices.Unity.dll</HintPath>
+      <HintPath>D:\DEV\BztToolbox\Libs\Microsoft.Practices.Unity.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -66,7 +70,8 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ModuleAssembliesExplorer.cs" />
+    <Compile Include="Constants\Enums.cs" />
+    <Compile Include="ModuleBackup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -80,15 +85,15 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Services\AssembliesExplorerServices.cs" />
-    <Compile Include="Services\IAssembliesExplorerServices.cs" />
-    <Compile Include="ViewModels\AssembliesExplorerMenuViewModel.cs" />
-    <Compile Include="ViewModels\AssembliesExplorerViewModel.cs" />
-    <Compile Include="Views\AssembliesExplorerMenuView.xaml.cs">
-      <DependentUpon>AssembliesExplorerMenuView.xaml</DependentUpon>
+    <Compile Include="Services\BackupServices.cs" />
+    <Compile Include="Services\IBackupServices.cs" />
+    <Compile Include="ViewModels\BackupMenuViewModel.cs" />
+    <Compile Include="ViewModels\BackupViewModel.cs" />
+    <Compile Include="Views\BackupMenuView.xaml.cs">
+      <DependentUpon>BackupMenuView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\AssembliesExplorerView.xaml.cs">
-      <DependentUpon>AssembliesExplorerView.xaml</DependentUpon>
+    <Compile Include="Views\BackupView.xaml.cs">
+      <DependentUpon>BackupView.xaml</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -107,17 +112,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Views\AssembliesExplorerMenuView.xaml">
+    <Page Include="Views\BackupMenuView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\AssembliesExplorerView.xaml">
+    <Page Include="Views\BackupView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
