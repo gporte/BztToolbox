@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BztToolbox.Modules.Backup",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BztToolbox.Modules.FilterEditor", "BztToolbox.Modules.FilterEditor\BztToolbox.Modules.FilterEditor.csproj", "{955C5B60-9CFC-4486-BF81-41FC6CE0F0FB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BztToolbox.Modules.PipelineReferencesExplorer", "BztToolbox.Modules.PipelineReferencesExplorer\BztToolbox.Modules.PipelineReferencesExplorer.csproj", "{8155D014-AB12-4545-9D7A-0D661ACEBE45}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{955C5B60-9CFC-4486-BF81-41FC6CE0F0FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{955C5B60-9CFC-4486-BF81-41FC6CE0F0FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{955C5B60-9CFC-4486-BF81-41FC6CE0F0FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8155D014-AB12-4545-9D7A-0D661ACEBE45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8155D014-AB12-4545-9D7A-0D661ACEBE45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8155D014-AB12-4545-9D7A-0D661ACEBE45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8155D014-AB12-4545-9D7A-0D661ACEBE45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -72,5 +78,6 @@ Global
 		{B98D3D2C-4EFF-4C70-85A6-5F8EF609B2D0} = {F7BFD4B4-A788-4D09-8F50-09FDB329977D}
 		{70AC2402-185E-42CB-8887-10F6E6274F25} = {F7BFD4B4-A788-4D09-8F50-09FDB329977D}
 		{955C5B60-9CFC-4486-BF81-41FC6CE0F0FB} = {F7BFD4B4-A788-4D09-8F50-09FDB329977D}
+		{8155D014-AB12-4545-9D7A-0D661ACEBE45} = {F7BFD4B4-A788-4D09-8F50-09FDB329977D}
 	EndGlobalSection
 EndGlobal
