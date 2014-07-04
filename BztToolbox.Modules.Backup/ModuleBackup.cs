@@ -17,7 +17,7 @@ namespace BztToolbox.Modules.Backup
 			NotificationHelper.WriteNotification("Initialisation du Module Backup.");
 
 			ModulesHelper.AddLoadedModuleToList("Backup");
-			
+
 			var regionManager = ServiceLocator.Current.GetInstance<IRegionManager>();
 			var container = ServiceLocator.Current.GetInstance<IUnityContainer>();
 
@@ -25,19 +25,7 @@ namespace BztToolbox.Modules.Backup
 			regionManager.RegisterViewWithRegion(RegionNames.MenuModulesRegion, typeof(BackupMenuView));
 
 			// enregistrement de la vue
-			container.RegisterInstance<BackupView>(
-				typeof(BackupView).ToString(), 
-				new BackupView()
-			);
-
-			// Ajout de la vue et desactivation
-			regionManager.Regions[RegionNames.ContentRegion].Add(
-				container.Resolve<BackupView>(typeof(BackupView).ToString())
-			);
-
-			regionManager.Regions[RegionNames.ContentRegion].Deactivate(
-				container.Resolve<BackupView>(typeof(BackupView).ToString())
-			);
+			container.RegisterType<BackupView>(typeof(BackupView).ToString());
 		}
 
 		#endregion

@@ -1,10 +1,11 @@
-﻿using System;
-using System.Windows.Input;
-using BztToolbox.Common.Constantes;
+﻿using BztToolbox.Common.Constantes;
 using BztToolbox.Common.Utility;
 using Microsoft.Practices.Composite.Regions;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
+using System;
+using System.Linq;
+using System.Windows.Input;
 
 namespace BztToolbox.Common.Commands
 {
@@ -24,12 +25,17 @@ namespace BztToolbox.Common.Commands
 		public void Execute(object parameter) {
 			var regionManager = ServiceLocator.Current.GetInstance<IRegionManager>();
 			var container = ServiceLocator.Current.GetInstance<IUnityContainer>();
+			var contentRegion = regionManager.Regions[RegionNames.ContentRegion];
 
-			regionManager.Regions[RegionNames.ContentRegion].Activate(
+			while (contentRegion.Views.Any()) {
+				contentRegion.Remove(contentRegion.Views.First());
+			}
+
+			regionManager.Regions[RegionNames.ContentRegion].Add(
 				container.Resolve<T>(typeof(T).ToString())
 			);
 
-			NotificationHelper.WriteNotification("Affichage du module " + parameter as string);
+			NotificationHelper.WriteNotification("Affichage de la vue " + parameter as string);
 		}
 
 		#endregion

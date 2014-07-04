@@ -1,0 +1,8 @@
+﻿<MenuItem x:Class="BztToolbox.Modules.PortDuplicator.Views.PortDuplicatorMenuView"
+		  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		  Header="Port _Duplicator"
+		  Command="{Binding Path=ShowModuleCmd}"
+		  CommandParameter="PortDuplicatorView">
+
+</MenuItem>

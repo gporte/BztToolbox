@@ -34,29 +34,41 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.BizTalk.BtsDbVersion">
+      <HintPath>..\Libs\Microsoft.BizTalk.BtsDbVersion.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.BizTalk.ExplorerOM">
-      <HintPath>D:\DEV\BztToolbox\Libs\Microsoft.BizTalk.ExplorerOM.dll</HintPath>
+      <HintPath>..\Libs\Microsoft.BizTalk.ExplorerOM.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Biztalk.Interop.Agent">
+      <HintPath>..\Libs\Microsoft.Biztalk.Interop.Agent.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Biztalk.RuleEngineExtensions">
+      <HintPath>..\Libs\Microsoft.Biztalk.RuleEngineExtensions.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.BizTalk.Tracing">
-      <HintPath>D:\DEV\BztToolbox\Libs\Microsoft.BizTalk.Tracing.dll</HintPath>
+      <HintPath>..\Libs\Microsoft.BizTalk.Tracing.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.Composite">
-      <HintPath>D:\DEV\BztToolbox\Libs\Microsoft.Practices.Composite.dll</HintPath>
+      <HintPath>..\Libs\Microsoft.Practices.Composite.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.Composite.Presentation">
-      <HintPath>D:\DEV\BztToolbox\Libs\Microsoft.Practices.Composite.Presentation.dll</HintPath>
+      <HintPath>..\Libs\Microsoft.Practices.Composite.Presentation.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.Composite.UnityExtensions">
-      <HintPath>D:\DEV\BztToolbox\Libs\Microsoft.Practices.Composite.UnityExtensions.dll</HintPath>
+      <HintPath>..\Libs\Microsoft.Practices.Composite.UnityExtensions.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.ObjectBuilder2">
-      <HintPath>D:\DEV\BztToolbox\Libs\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+      <HintPath>..\Libs\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation">
-      <HintPath>D:\DEV\BztToolbox\Libs\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <HintPath>..\Libs\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.Unity">
-      <HintPath>D:\DEV\BztToolbox\Libs\Microsoft.Practices.Unity.dll</HintPath>
+      <HintPath>..\Libs\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.RuleEngine">
+      <HintPath>..\Libs\Microsoft.RuleEngine.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />

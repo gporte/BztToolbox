@@ -25,19 +25,7 @@ namespace BztToolbox.Modules.AboutModules
 			regionManager.RegisterViewWithRegion(RegionNames.MenuModulesRegion, typeof(AboutModulesMenuView));
 
 			// enregistrement de la vue
-			container.RegisterInstance<AboutModulesView>(
-				typeof(AboutModulesView).ToString(),
-				new AboutModulesView()
-			);
-
-			// Ajout de la vue et desactivation
-			regionManager.Regions[RegionNames.ContentRegion].Add(
-				container.Resolve<AboutModulesView>(typeof(AboutModulesView).ToString())
-			);
-
-			regionManager.Regions[RegionNames.ContentRegion].Deactivate(
-				container.Resolve<AboutModulesView>(typeof(AboutModulesView).ToString())
-			);
+			container.RegisterType<AboutModulesView>(typeof(AboutModulesView).ToString());
 		}
 		#endregion
 	}

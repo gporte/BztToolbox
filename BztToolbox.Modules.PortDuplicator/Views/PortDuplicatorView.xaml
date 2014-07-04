@@ -1,0 +1,64 @@
+﻿<UserControl x:Class="BztToolbox.Modules.PortDuplicator.Views.PortDuplicatorView"
+			 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">    
+	<TabControl>
+		<TabItem Header="Send Ports">
+			<Grid>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="auto" />
+					<RowDefinition MinHeight="50" />
+					<RowDefinition Height="auto"/>
+				</Grid.RowDefinitions>
+
+				<TextBox Name="tbxSndFilter" Grid.Row="0" Text="{Binding Path=SndFilter, UpdateSourceTrigger=PropertyChanged}" />
+
+				<ListBox Name="lbxSendPorts" Grid.Row="1" ItemsSource="{Binding Path=SendPorts}">
+					<ListBox.ItemTemplate>
+						<DataTemplate>
+							<StackPanel Orientation="Horizontal">
+								<Label Content="{Binding Path=Application.Name}" Width="200" />
+								<Label Content="{Binding Path=Name}" />
+							</StackPanel>
+						</DataTemplate>
+					</ListBox.ItemTemplate>
+				</ListBox>
+
+				<StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Stretch">
+					<Button Name="btnDuplicateSndPort" Height="30" Width="75" Margin="20,0,0,0" Command="{Binding Path=DuplicateSendPortCmd}" CommandParameter="{Binding ElementName=lbxSendPorts, Path=SelectedItem}">
+						<Label Content="Dupliquer" />
+					</Button>
+				</StackPanel>
+			</Grid>
+		</TabItem>
+		
+		<TabItem Header="Receive Locations">
+			<Grid>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="auto" />
+					<RowDefinition MinHeight="50" />
+					<RowDefinition Height="auto"/>
+				</Grid.RowDefinitions>
+
+				<TextBox Name="tbxRcvLocFilter" Grid.Row="0" Text="{Binding Path=RcvLocFilter, UpdateSourceTrigger=PropertyChanged}" />
+
+				<ListBox Name="lbxRcvLoc" Grid.Row="1" ItemsSource="{Binding Path=ReceiveLocations}">
+					<ListBox.ItemTemplate>
+						<DataTemplate>
+							<StackPanel Orientation="Horizontal">
+								<Label Content="{Binding Path=ReceivePort.Application.Name}" Width="200" />
+								<Label Content="{Binding Path=ReceivePort.Name}" Width="200" />
+								<Label Content="{Binding Path=Name}" />
+							</StackPanel>
+						</DataTemplate>
+					</ListBox.ItemTemplate>
+				</ListBox>
+
+				<StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Stretch">
+					<Button Name="btnDuplicateRcvLoc" Height="30" Width="75" Margin="20,0,0,0" Command="{Binding Path=DuplicateRcvLocCmd}" CommandParameter="{Binding ElementName=lbxRcvLoc, Path=SelectedItem}">
+						<Label Content="Dupliquer" />
+					</Button>
+				</StackPanel>
+			</Grid>
+		</TabItem>
+	</TabControl>
+</UserControl>

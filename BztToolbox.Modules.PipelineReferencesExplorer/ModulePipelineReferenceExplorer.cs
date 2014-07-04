@@ -6,7 +6,7 @@ using Microsoft.Practices.Composite.Regions;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
 
-namespace BztToolbox.PipelineReferencesExplorer
+namespace BztToolbox.Modules.PipelineReferencesExplorer
 {
 	[Priority(200)]
 	public class ModulePipelineReferenceExplorer : IModule
@@ -25,19 +25,7 @@ namespace BztToolbox.PipelineReferencesExplorer
 			regionManager.RegisterViewWithRegion(RegionNames.MenuModulesRegion, typeof(PipelineReferenceExplorerMenuView));
 
 			// enregistrement de la vue
-			container.RegisterInstance<PipelineReferenceExplorerView>(
-				typeof(PipelineReferenceExplorerView).ToString(), 
-				new PipelineReferenceExplorerView()
-			);
-
-			// Ajout de la vue et desactivation
-			regionManager.Regions[RegionNames.ContentRegion].Add(
-				container.Resolve<PipelineReferenceExplorerView>(typeof(PipelineReferenceExplorerView).ToString())
-			);
-
-			regionManager.Regions[RegionNames.ContentRegion].Deactivate(
-				container.Resolve<PipelineReferenceExplorerView>(typeof(PipelineReferenceExplorerView).ToString())
-			);
+			container.RegisterType<PipelineReferenceExplorerView>(typeof(PipelineReferenceExplorerView).ToString());
 		}
 
 		#endregion

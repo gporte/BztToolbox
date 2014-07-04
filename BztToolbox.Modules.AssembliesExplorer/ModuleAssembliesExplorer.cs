@@ -25,19 +25,7 @@ namespace BztToolbox.Modules.AssembliesExplorer
 			regionManager.RegisterViewWithRegion(RegionNames.MenuModulesRegion, typeof(AssembliesExplorerMenuView));
 
 			// enregistrement de la vue
-			container.RegisterInstance<AssembliesExplorerView>(
-				typeof(AssembliesExplorerView).ToString(), 
-				new AssembliesExplorerView()
-			);
-
-			// Ajout de la vue et desactivation
-			regionManager.Regions[RegionNames.ContentRegion].Add(
-				container.Resolve<AssembliesExplorerView>(typeof(AssembliesExplorerView).ToString())
-			);
-
-			regionManager.Regions[RegionNames.ContentRegion].Deactivate(
-				container.Resolve<AssembliesExplorerView>(typeof(AssembliesExplorerView).ToString())
-			);
+			container.RegisterType<AssembliesExplorerView>(typeof(AssembliesExplorerView).ToString());
 		}
 
 		#endregion
