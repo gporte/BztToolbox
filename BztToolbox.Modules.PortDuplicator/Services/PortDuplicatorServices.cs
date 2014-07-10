@@ -111,12 +111,14 @@ namespace BztToolbox.Modules.PortDuplicator.Services
 			newRcvLoc.Name = newName;
 
 			// config
-			//newRcvLoc.ReceivePort = originalReceiveLocation.ReceivePort;
 			newRcvLoc.ReceiveHandler = originalReceiveLocation.ReceiveHandler;
 			newRcvLoc.ReceivePipeline = originalReceiveLocation.ReceivePipeline;
-			newRcvLoc.Address = originalReceiveLocation.Address + Resources.rcvAdressSuffix;
-			newRcvLoc.TransportType = originalReceiveLocation.TransportType;
 			newRcvLoc.Description = string.Format(Resources.TemplateDescription, originalReceiveLocation.Name);
+			newRcvLoc.Address = originalReceiveLocation.Address + Resources.rcvAdressSuffix;
+
+			// transport
+			newRcvLoc.TransportType = originalReceiveLocation.TransportType;
+			newRcvLoc.TransportTypeData = originalReceiveLocation.TransportTypeData;
 
 			// enregistrement des modifications
 			this._catalog.SaveChanges();
